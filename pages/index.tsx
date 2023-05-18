@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useEffect, useRef} from 'react';
 import Head from 'next/head'
 import 'animate.css/animate.min.css'
 import Particles from 'react-tsparticles';
@@ -27,32 +27,24 @@ export default function Home() {
             </Head>
 
             <main className="gradient-background">
-                <div className="stickman-container">
-                    <img
-                        ref={imageRef}
-                        src="/PP.png"
-                        width={1000}
-                        height={1000}
-                        alt="Still thinking"
-                    />
-                </div>
-                <Particles
-                    params={{
-                        particles: {
-                            line_linked: {
-                                shadow: {
-                                    enable: true,
-                                    color: "#3CA9D1",
-                                    blur: 5
-                                }
-                            }
-                        }
-                    }}
-                    style={{
-                        width: '100%',
-                        position: "absolute"
-                    }}
-                />
+
+
+                    <div className="glitch-image"></div>
+                    <div className="glitch-image"></div>
+                    <div className="glitch-image"></div>
+                    <div className="glitch-image"></div>
+                    <div className="glitch-image"></div>
+                    <div className="glitch-image"></div>
+
+                {/*<div className="stickman-container">*/}
+                {/*    <Image*/}
+                {/*        ref={imageRef}*/}
+                {/*        src="/PP.png"*/}
+                {/*        width={1000}*/}
+                {/*        height={1000}*/}
+                {/*        alt="Still thinking"*/}
+                {/*    />*/}
+                {/*</div>*/}
             </main>
         </div>
     )
