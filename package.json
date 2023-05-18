@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "animate.css": "4.1.1",
+    "glitch-canvas": "^1.1.12",
+    "next": "13.4.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-glitch-effect": "^3.1.0",
+    "react-parallax": "^3.5.1",
+    "react-responsive-carousel": "^3.2.23",
+    "react-tsparticles": "^2.9.3",
+    "sharp": "0.32.1"
+  },
+  "devDependencies": {
+    "@types/node": "18.16.9",
+    "@types/react": "18.2.6",
+    "autoprefixer": "10.4.14",
+    "postcss": "8.4.23",
+    "prettier": "2.8.8",
+    "prettier-plugin-tailwindcss": "0.2.8",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.0.4"
+  }
+}
