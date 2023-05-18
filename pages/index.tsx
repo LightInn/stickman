@@ -3,6 +3,7 @@ import Head from 'next/head'
 import 'animate.css/animate.min.css'
 import Particles from 'react-tsparticles';
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
     const imageRef = useRef<HTMLImageElement>(null);
@@ -10,7 +11,7 @@ export default function Home() {
     return (
         <div className="text-Sky-50 snap-y snap-proximity bg-slate-1000 font-varela-round">
             <Head>
-                <title>Sad Spirit</title>
+                <title>Stickman</title>
                 <meta
                     name="description"
                     content="When the mountain cry, the flowers grow"
@@ -29,12 +30,17 @@ export default function Home() {
             <main className="gradient-background">
 
 
-                    <div className="glitch-image"></div>
-                    <div className="glitch-image"></div>
-                    <div className="glitch-image"></div>
-                    <div className="glitch-image"></div>
-                    <div className="glitch-image"></div>
-                    <div className="glitch-image"></div>
+                <div className="glitch-image"></div>
+                <div className="glitch-image"></div>
+                <div className="glitch-image"></div>
+                <div className="glitch-image"></div>
+                <div className="glitch-image"></div>
+                <div className="glitch-image"></div>
+
+
+                <Link href={"/stickmen"} className="text-5xl text-center left-[500px] text-Sky-50 cursor-pointer z-50">I
+                    love stickman</Link>
+
 
                 {/*<div className="stickman-container">*/}
                 {/*    <Image*/}

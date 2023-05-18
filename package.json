@@ -6,8 +6,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
+    "@heroicons/react": "^2.0.18",
+    "@tailwindcss/typography": "^0.5.9",
     "animate.css": "4.1.1",
     "glitch-canvas": "^1.1.12",
+    "heroicons": "^2.0.18",
     "next": "13.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
