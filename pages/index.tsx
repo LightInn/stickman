@@ -3,7 +3,6 @@ import Head from 'next/head'
 import 'animate.css/animate.min.css'
 import Particles from 'react-tsparticles';
 import Image from "next/image";
-import glitch from 'glitch-canvas';
 
 export default function Home() {
     const imageRef = useRef<HTMLImageElement>(null);
