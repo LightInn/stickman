@@ -29,13 +29,13 @@ export default function Home() {
             },
             {
                 id: 2,
-                imageSrc: '/printmaterial.png',
+                imageSrc: '/printmaterial.jpg',
                 imageAlt: "Side profile of women's Basic Tee in black.",
                 primary: false,
             },
             {
                 id: 3,
-                imageSrc: '/product-shot-02.jpg',
+                imageSrc: '/colorvives.jpg',
                 imageAlt: "Front of women's Basic Tee in black.",
                 primary: false,
             },
@@ -183,10 +183,10 @@ export default function Home() {
                                             key={image.id}
                                             src={image.imageSrc}
                                             alt={image.imageAlt}
-                                            width={500}
-                                            height={500}
+                                            width={image.primary ? 400 : 200}
+                                            height={image.primary ? 400 : 200}
                                             className={
-                                                (image.primary ? 'lg:col-span-2 lg:row-span-2' : 'hidden lg:block') +
+                                                (image.primary ? 'lg:col-span-2 lg:row-span-2' : ' lg:block ') +
                                                 'rounded-lg'
                                             }
                                         />
