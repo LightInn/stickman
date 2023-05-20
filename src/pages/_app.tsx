@@ -1,5 +1,5 @@
-import '../styles/globals.css'
-import '../styles/Glitch.css'
+import '/src/styles/globals.css'
+import '/src/styles/Glitch.css'
 import type { AppProps } from 'next/app'
 import React from 'react'
 import Script from 'next/script'
