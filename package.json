@@ -20,7 +20,7 @@
     "react-parallax": "^3.5.1",
     "react-responsive-carousel": "^3.2.23",
     "react-tsparticles": "^2.9.3",
-    "sharp": "0.32.1"
+    "sharp": "0.33.2"
   },
   "devDependencies": {
     "@types/node": "20.11.10",
