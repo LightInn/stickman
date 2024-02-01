@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@types/node": "20.11.10",
-    "@types/react": "18.2.48",
+    "@types/react": "18.2.51",
     "autoprefixer": "10.4.16",
     "postcss": "8.4.32",
     "prettier": "3.1.1",
