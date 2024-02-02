@@ -23,7 +23,7 @@
     "sharp": "0.33.2"
   },
   "devDependencies": {
-    "@types/node": "20.11.10",
+    "@types/node": "20.11.16",
     "@types/react": "18.2.51",
     "autoprefixer": "10.4.16",
     "postcss": "8.4.33",
