@@ -1,18 +1,11 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-    reactStrictMode: true,
-    images: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'stickman-api.lightin.io',
-                pathname: '**',
-            }
-        ],
-    },
 
-    i18n: {
-        locales: ['fr'],
-        defaultLocale: 'fr',
-    },
-}
+const {withContentlayer} = require("next-contentlayer")
+
+const nextConfig = {
+    compiler:{
+        removeConsole: true,
+    }
+};
+
+module.exports = withContentlayer({ ...nextConfig });
