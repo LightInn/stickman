@@ -1,19 +1,18 @@
 "use client"
 import React from 'react'
-import { useMDXComponent } from 'next-contentlayer/hooks'
 import Image from 'next/image'
-
+import { useMDXComponent } from 'next-contentlayer/hooks';
 
 const mdxComponents = {
     Image
 }
 
-const RenderMdx = ({blog}) => {
+const RenderMdx = ({ blog }) => {
 
-    const MDXContent = useMDXComponent(blog.body.code)
+    // const MDXContent = useMDXComponent(blog.body.code)
 
-  return (
-    <div className='col-span-12  lg:col-span-8 font-in prose sm:prose-base md:prose-lg max-w-max
+    return (
+        <div className="col-span-12  lg:col-span-8 font-in prose sm:prose-base md:prose-lg max-w-max
     prose-blockquote:bg-accent/20 
     prose-blockquote:p-2
     prose-blockquote:px-6
@@ -33,10 +32,12 @@ const RenderMdx = ({blog}) => {
     
 
 
-    '> 
-        <MDXContent components={mdxComponents}/>
-    </div>
-  )
+    ">
+            {/*<MDXContent components={mdxComponents}/>*/}
+            {/*{blog.content}*/}
+            <div className="text-container" dangerouslySetInnerHTML={{ __html: blog.field }}/>
+        </div>
+    )
 }
 
 export default RenderMdx
