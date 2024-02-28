@@ -75,7 +75,7 @@ export default async function BlogPage({ params }) {
     if (blog.image) {
         imageList =
             typeof blog.image.filePath === "string"
-                ? [siteMetadata.siteUrl + blog.image.filePath.replace("../public", "")]
+                ? [siteMetadata.siteUrl + blog.image]
                 : blog.image;
     }
 
