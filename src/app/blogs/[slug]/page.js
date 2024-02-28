@@ -8,14 +8,16 @@ import { slug }     from "github-slugger";
 import Image        from "next/image";
 import { notFound } from "next/navigation";
 
-const allBlogs = await getAllBlogs();
+
 
 export async function generateStaticParams() {
-    return allBlogs.map((blog) => ({ slug: blog._raw.flattenedPath }));
+    const allBlogs = await getAllBlogs();
+    return allBlogs.map((blog) => ({ slug: blog.url }));
 }
 
 export async function generateMetadata({ params }) {
-    const blog = allBlogs.find((blog) => blog._raw.flattenedPath === params.slug);
+    const allBlogs = await getAllBlogs();
+    const blog = allBlogs.find((blog) => blog.url === params.slug);
     if (!blog) {
         return;
     }
@@ -60,8 +62,9 @@ export async function generateMetadata({ params }) {
     };
 }
 
-export default function BlogPage({ params }) {
-    const blog = allBlogs.find((blog) => blog._raw.flattenedPath === params.slug);
+export default async function BlogPage({ params }) {
+    const allBlogs = await getAllBlogs();
+    const blog = allBlogs.find((blog) => blog.url === params.slug);
 
     if (!blog) {
         notFound()
@@ -113,7 +116,7 @@ export default function BlogPage({ params }) {
                     </div>
                     <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60 dark:bg-dark/40"/>
                     <Image
-                        src={"https://stickman-api.lightin.io/api/files/" + blog.image}
+                        src={"https://stickman-api.lightin.io/api/files/" + blog.collectionId + "/" + blog.id + "/" + blog.image}
                         alt={blog.title}
                         width={1920}
                         height={1080}

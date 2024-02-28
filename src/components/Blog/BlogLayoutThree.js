@@ -6,9 +6,9 @@ import React from "react";
 const BlogLayoutThree = ({ blog }) => {
   return (
     <div className="group flex flex-col items-center text-dark dark:text-light">
-      <Link href={blog.url} className="h-full rounded-xl overflow-hidden">
+      <Link href={"/blog/" + blog.url} className="h-full rounded-xl overflow-hidden">
         <Image
-          src={"https://stickman-api.lightin.io/api/files/" + blog.image}
+          src={"https://stickman-api.lightin.io/api/files/" + blog.collectionId + "/" + blog.id + "/" + blog.image}
           alt={blog.title}
           width={1920}
           height={1080}
@@ -21,7 +21,7 @@ const BlogLayoutThree = ({ blog }) => {
         <span className="uppercase text-accent dark:text-accentDark font-semibold text-xs sm:text-sm">
           {blog.tags[0]}
         </span>
-        <Link href={blog.url} className="inline-block my-1">
+        <Link href={"/blog/" + blog.url} className="inline-block my-1">
           <h2 className="font-semibold capitalize  text-base sm:text-lg">
             <span
               className="bg-gradient-to-r from-accent/50 to-accent/50  dark:from-accentDark/50
