@@ -13,7 +13,7 @@ const BlogLayoutOne = ({ blog }) => {
             "
       />
       <Image
-        src={"https://stickman-api.lightin.io/api/files/" + blog.image}
+        src={"https://stickman-api.lightin.io/api/files/" + blog.collectionId + "/" + blog.id + "/" + blog.image}
         alt={blog.title}
         width={1920}
         height={1080}
@@ -25,7 +25,7 @@ const BlogLayoutOne = ({ blog }) => {
         <Tag link={`/categories/${slug(blog.tags[0])}`} name={blog.tags[0]}
         className="px-6 text-xs  sm:text-sm py-1 sm:py-2 !border "
         />
-        <Link href={blog.url} className="mt-6">
+        <Link href={"/blog/" + blog.url} className="mt-6">
           <h2 className="font-bold capitalize text-sm xs:text-base sm:text-xl md:text-2xl text-light mt-2 sm:mt-4">
             <span
               className="bg-gradient-to-r from-accent to-accent bg-[length:0px_6px] dark:from-accentDark/50 dark:to-accentDark/50
