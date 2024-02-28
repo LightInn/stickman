@@ -1,9 +1,11 @@
-import { allBlogs } from "@/.contentlayer/generated";
+// import { allBlogs }    from "@/.contentlayer/generated";
+import getAllBlogs     from '@/src/services/blog.services';
 import BlogLayoutThree from "@/src/components/Blog/BlogLayoutThree";
 import Categories from "@/src/components/Blog/Categories";
 import GithubSlugger, { slug } from "github-slugger";
 
 const slugger = new GithubSlugger();
+const allBlogs = await getAllBlogs();
 
 export async function generateStaticParams() {
   const categories = [];

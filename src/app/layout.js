@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import siteMetadata from "../utils/siteMetaData";
 import Script from "next/script";
 
+export const revalidate = 0;
+
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
