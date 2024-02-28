@@ -1,9 +1,9 @@
 # *
 User-agent: *
-Allow: /
+Disallow: /
 
 # Host
-Host: https://create-blog-with-nextjs.vercel.app
+Host: https://stickman.fr
 
 # Sitemaps
-Sitemap: https://create-blog-with-nextjs.vercel.app/sitemap.xml
+Sitemap: https://stickman.fr/sitemap.xml

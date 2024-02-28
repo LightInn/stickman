@@ -139,7 +139,7 @@ export default async function BlogPage({ params }) {
                             </summary>
                             <ul className="mt-4 font-in text-base">
 
-                                <div className="text-container" dangerouslySetInnerHTML={{ __html: toc.Generate(blog.field).tocList }}/>
+                                <div className="text-container" dangerouslySetInnerHTML={{ __html: toc.Generate(blog.content).tocList }}/>
 
                             </ul>
                         </details>
