@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import { useMDXComponent } from 'next-contentlayer/hooks';
 
 const mdxComponents = {
     Image
@@ -29,13 +28,9 @@ const RenderMdx = ({ blog }) => {
 
     first-letter:text-3xl
     sm:first-letter:text-5xl
-    
-
 
     ">
-            {/*<MDXContent components={mdxComponents}/>*/}
-            {/*{blog.content}*/}
-            <div className="text-container" dangerouslySetInnerHTML={{ __html: blog.field }}/>
+            <div className="text-container" dangerouslySetInnerHTML={{ __html: blog.content }}/>
         </div>
     )
 }
