@@ -7,6 +7,7 @@ import getAllBlogs  from '@/src/services/blog.services';
 import { slug }     from "github-slugger";
 import Image        from "next/image";
 import { notFound } from "next/navigation";
+import toc from "@pakjiddat/toc";
 
 
 
@@ -28,8 +29,8 @@ export async function generateMetadata({ params }) {
     let imageList = [siteMetadata.socialBanner];
     if (blog.image) {
         imageList =
-            typeof blog.image.filePath === "string"
-                ? [siteMetadata.siteUrl + blog.image.filePath.replace("../public", "")]
+            typeof blog.image === "string"
+                ? [siteMetadata.siteUrl + blog.image]
                 : blog.image;
     }
     const ogImages = imageList.map((img) => {
@@ -137,30 +138,9 @@ export default async function BlogPage({ params }) {
                                 Table Of Content
                             </summary>
                             <ul className="mt-4 font-in text-base">
-                                {blog.toc.map((heading) => {
-                                    return (
-                                        <li key={`#${heading.slug}`} className="py-1">
-                                            <a
-                                                href={`#${heading.slug}`}
-                                                data-level={heading.level}
-                                                className="data-[level=two]:pl-0  data-[level=two]:pt-2
-                                       data-[level=two]:border-t border-solid border-dark/40
-                                       data-[level=three]:pl-4
-                                       sm:data-[level=three]:pl-6
-                                       flex items-center justify-start
-                                       "
-                                            >
-                                                {heading.level === "three" ? (
-                                                    <span className="flex w-1 h-1 rounded-full bg-dark mr-2">
-                          &nbsp;
-                        </span>
-                                                ) : null}
 
-                                                <span className="hover:underline">{heading.text}</span>
-                                            </a>
-                                        </li>
-                                    );
-                                })}
+                                <div className="text-container" dangerouslySetInnerHTML={{ __html: toc.Generate(blog.field).tocList }}/>
+
                             </ul>
                         </details>
                     </div>
