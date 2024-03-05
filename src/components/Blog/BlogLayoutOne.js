@@ -13,10 +13,10 @@ const BlogLayoutOne = ({ blog }) => {
             "
       />
       <Image
-        src={"https://stickman-api.lightin.io/api/files/" + blog.collectionId + "/" + blog.id + "/" + blog.image}
+        src={blog.image}
         alt={blog.title}
-        width={1920}
-        height={1080}
+        width={1792}
+        height={1024}
         className="w-full h-full object-center object-cover rounded-xl group-hover:scale-105 transition-all ease duration-300"
         sizes="(max-width: 1180px) 100vw, 50vw"
       />

@@ -8,7 +8,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'stickman-api.lightin.io',
+                hostname: '**.windows.net',
                 port: '',
                 pathname: '**'
             }

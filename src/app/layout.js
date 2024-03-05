@@ -33,7 +33,7 @@ export const metadata = {
     url: siteMetadata.siteUrl,
     siteName: siteMetadata.title,
     images: [siteMetadata.socialBanner],
-    locale: "en_US",
+    locale: "fr_FR",
     type: "website",
   },
   robots: {
@@ -57,7 +57,25 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="fr">
+    <head>
+      <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-X8WRLXGL6T"
+      />
+
+      <Script id="google-analytics">
+        {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-X8WRLXGL6T'});
+          `}
+      </Script>
+    </head>
+
+
+
       <body
         className={cx(
           inter.variable,
@@ -66,10 +84,10 @@ export default function RootLayout({ children }) {
         )}
       >
         <Script id="theme-switcher" strategy="beforeInteractive">
-          {`if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark')
+          {`if (localStorage.getItem('theme') === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+    document.documentElement.classList.add('light')
   } else {
-    document.documentElement.classList.remove('dark')
+    document.documentElement.classList.remove('light')
   }`}
         </Script>
         <Header />

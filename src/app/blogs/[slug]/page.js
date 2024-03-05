@@ -117,10 +117,10 @@ export default async function BlogPage({ params }) {
                     </div>
                     <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60 dark:bg-dark/40"/>
                     <Image
-                        src={"https://stickman-api.lightin.io/api/files/" + blog.collectionId + "/" + blog.id + "/" + blog.image}
+                        src={blog.image}
                         alt={blog.title}
-                        width={1920}
-                        height={1080}
+                        width={1792}
+                        height={1024}
                         className="aspect-square w-full h-full object-cover object-center"
                         priority
                         sizes="100vw"

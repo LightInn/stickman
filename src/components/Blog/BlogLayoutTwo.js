@@ -11,10 +11,10 @@ const BlogLayoutTwo = ({ blog }) => {
         className=" col-span-12  lg:col-span-4 h-full rounded-xl overflow-hidden"
       >
         <Image
-          src={"https://stickman-api.lightin.io/api/files/" + blog.collectionId + "/" + blog.id + "/" + blog.image}
+          src={blog.image}
           alt={blog.title}
-          width={1920}
-          height={1080}
+          width={1792}
+          height={1024}
           className="aspect-square w-full h-full object-cover object-center group-hover:scale-105 transition-all ease duration-300"
           sizes="(max-width: 640px) 100vw,(max-width: 1024px) 50vw, 33vw"
         />
