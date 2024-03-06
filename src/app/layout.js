@@ -59,6 +59,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
     <head>
+      <Script async src="https://umami.wadefade.fr/script.js"
+              strategy={"afterInteractive"}
+              data-website-id="725bbe92-98fb-4eae-9334-728cfa960f25"></Script>
       <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-X8WRLXGL6T"
@@ -75,12 +78,11 @@ export default function RootLayout({ children }) {
     </head>
 
 
-
-      <body
+    <body
         className={cx(
-          inter.variable,
-          manrope.variable,
-          "font-mr bg-light dark:bg-dark"
+            inter.variable,
+            manrope.variable,
+            "font-mr bg-light dark:bg-dark"
         )}
       >
         <Script id="theme-switcher" strategy="beforeInteractive">
